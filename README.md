@@ -1,2 +1,2 @@
 # ZebraTester-Public-Plugins
-Contains non-commercial public plugins provided by the community around ZebraTester
+Contains non-commercial public plugins for ZebraTester

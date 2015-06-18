@@ -86,7 +86,7 @@ public class GenerateSHA1 implements LoadtestPluginInterface
 	{
 		String[] labels = new String[2];
 		labels[0] = "1st string value";
-		labels[1] = "2ndstring value";
+		labels[1] = "2nd string value";
 		return labels;
 	}
 

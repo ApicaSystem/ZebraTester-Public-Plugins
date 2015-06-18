@@ -1,8 +1,6 @@
 # NTLM-PerLoop
-Changes ZebraTester Behavior from NTLM Auth per User to NTLM Auth per Loop.
-This plugin has been tested with ZebraTester 5.2-E and 5.2-M but should work for any 5.2-X version.
-
-##Guide##
+Changes ZebraTester Behavior from NTLM Auth per User to NTLM Auth per Loop.  
+This plugin has been tested with ZebraTester 5.2-E and 5.2-M but should work for any 5.2-X version.  
 
 ###Installation###
 1. Add plugin to ../MyTests/Plugins/
@@ -10,26 +8,28 @@ This plugin has been tested with ZebraTester 5.2-E and 5.2-M but should work for
 
 ###Usage###
 1. Load your ZebraTester scenario
-2. Add input file with your NTLM authentication
-  1. Enter auth in this file with Domain;Username;Password columns
-3. Create the following variables tied to the input file
-  1. ntlmDomain
-  2. ntlmUsername
-  3. ntlmPassword
-4. Add plugin "NTLM per Loop" to test
-5. Press continue
-6. Configure Run-Time Input Parameter by tying the variables you created previusly as below
+2. Create ntlmauth.txt in your scenario directory with the following structure,   
+```
+#ntlmDomain;ntlmUsername;ntlmPassword  
+domain.local;username1;password1
+```
+3. Add your input file to the scenario
+4. Create the following variables tied to the columns of ntlmauth.txt
+  * ntlmDomain
+  * ntlmUsername
+  * ntlmPassword
+5. Add plugin "NTLM per Loop" to test
+6. Press continue
+7. Configure Run-Time Input Parameter by tying the variables you created previusly as below
   * Domain = ntlmDomain
   * Username = ntlmUsername
   * Password = ntlmPassword
-7. When compiling your test make sure to select "apply individual NTLM account per user from input file ntlmauth.txt"
-
-When above has been configured and the test has compiled successfully you will now be able to run your test and this time assign credentials on a per loop basis rather than a per thread basis.
+8. When compiling your test make sure to select "apply individual NTLM account per user from input file ntlmauth.txt"
+9. Zip togheter the generated class file togheter with your ntlmauth.txt and you are ready to use your test
 
 ##About##
-Created by David F
-Maintained by Daniel F
-
+Created by Apica  
+Maintained by Daniel Freij  
 
 ##License##
 The MIT License (MIT)

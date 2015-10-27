@@ -193,7 +193,7 @@ import java.util.Random;
 	     	String guid_format = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
 	        for(char ch : guid_format.toCharArray()){
 	       	 if(ch == 'x')
-	       		 guid_output += Integer.toHexString((int) ((Math.random()*16)+1));
+	       		 guid_output += Integer.toHexString((int) ((Math.random()*16)));
 	       	 else
 	       		 guid_output += ch;
 	        }

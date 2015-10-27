@@ -1,3 +1,5 @@
+//package test1;
+
 //Some parts of this code have been automatically generated - copyright for generic plug-in procedure reserved by Ingenieurbuero David Fischer AG, Switzerland.
 //Copyright for manual written code belongs to <your name>, <your company>, <your country>
 import dfischer.utils.GenericPluginInterface;
@@ -43,7 +45,7 @@ public class GenerateGUID implements LoadtestPluginInterface
  
  public String getPluginDescription()
  {
-     return "Plugin to generate globally unique ID. Replaces x with random hex digit so you can set a static value instead of x.\n\n";
+     return "Plugin to generate globally unique ID. Replaces x with random hex digit so you can set a static value instead of x (like 1FABxxxx-3xxx-5xxx-8xxx-xxxxxxxxxxx9).\n\n";
  }
  
  
@@ -160,7 +162,7 @@ public class GenerateGUID implements LoadtestPluginInterface
 
      for(char ch : guid_format.toCharArray()){
     	 if(ch == 'x')
-    		 guid_output += Integer.toHexString((int) ((Math.random()*16)+1));
+    		 guid_output += Integer.toHexString((int) (Math.random()*16));
     	 else
     		 guid_output += ch;
      }
@@ -210,7 +212,7 @@ public class GenerateGUID implements LoadtestPluginInterface
          
          GenerateGUID plugin = new GenerateGUID();
          plugin.construct(null);
-         plugin.setInputParameter(0, "xxxxxxxx-xxxx-Fxxx-xxxx-xxxxxxxxxxxx");
+         plugin.setInputParameter(0, "feedxxxx-xxxx-fxxx-xxxx-xxxxxxxxxxxx");
          plugin.execute(null);
          System.out.println(plugin.getOutputParameter(0));
          plugin.deconstruct(null);

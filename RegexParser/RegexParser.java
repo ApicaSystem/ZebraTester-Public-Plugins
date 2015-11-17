@@ -183,7 +183,7 @@ public class RegexParser implements LoadtestPluginInterface
 		HttpTestURL httpTestURL = pluginContext.getHttpTestURL();
 		if (pluginContext.urlPassed())
 		{
-			// HERE IS WHERE THE MAGIC HAPPENS
+			// Regex Code starts here
 			
 				
 			logVector.log("******PLUGIN_DEBUG****** Content To Search IN" + user_input );
@@ -196,9 +196,7 @@ public class RegexParser implements LoadtestPluginInterface
 						{
   						
 			logVector.log("******PLUGIN_DEBUG****** RegexMatch: " + matcher.group(1));
-								// TRIMMING THE VALUE
 								String str = matcher.group(1);
-								//String str2 = str.substring(0, str.length()-1);
 
 			output_result = str;
 						}

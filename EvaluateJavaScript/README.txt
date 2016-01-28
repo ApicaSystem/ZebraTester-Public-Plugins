@@ -1,0 +1,1 @@
+This weird little plugin allows for the evaluation of arbitrary JavaScript expressions.

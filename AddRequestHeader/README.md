@@ -8,23 +8,23 @@ Compatible with 5.1C and higher versions.
 
 ###Usage###
 Plug-in Class: AddRequestHeader
- Last Modified: 	 27 Jan 2016 21:16:02 
- Plug-in Type: 	 Load Test Plug-in 
- Plug-in Name: 	 Add a Request Header 
- Construct Scope: 	 not fixed - arbitrary 
- Execution Scope: 	 not fixed - arbitrary 
- Execution Order: 	 not fixed - arbitrary 
- Allow Multiple Usage: 	 yes 
- 
+ Last Modified: 	 27 Jan 2016 21:16:02
+ Plug-in Type: 	 Load Test Plug-in
+ Plug-in Name: 	 Add a Request Header
+ Construct Scope: 	 not fixed - arbitrary
+ Execution Scope: 	 not fixed - arbitrary
+ Execution Order: 	 not fixed - arbitrary
+ Allow Multiple Usage: 	 yes
+
 Input Parameter
- No. 	 Name 	 Utilization 	 Assign From 
- 1 	 Request Header Name 	 mandatory 	 variable 
- 2 	 Request Header Value 	 mandatory 	 variable 
- 
+ No. 	 Name 	 Utilization 	 Assign From
+ 1 	 Request Header Name 	 mandatory 	 variable
+ 2 	 Request Header Value 	 mandatory 	 variable
+
 Output Parameter
 [none]
 
-Create vars for request header name and value. 
+Create vars for request header name and value.
 example:
 Request Header Name - Authorization
 Request Header Value - Basic 7a6cb6e7f9d3256

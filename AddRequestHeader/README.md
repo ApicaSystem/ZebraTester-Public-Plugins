@@ -15,13 +15,12 @@ Construct Scope: 	 not fixed - arbitrary
 Execution Scope: 	 not fixed - arbitrary
 Execution Order: 	 not fixed - arbitrary
 Allow Multiple Usage: 	 yes
- 
 
 Input Parameter
 No. 	 Name 	 Utilization 	 Assign From
 1 	 Request Header Name 	 mandatory 	 variable
 2 	 Request Header Value 	 mandatory 	 variable
- 
+
 Output Parameter
 [none]
 

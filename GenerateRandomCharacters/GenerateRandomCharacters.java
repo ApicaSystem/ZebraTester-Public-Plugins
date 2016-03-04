@@ -9,13 +9,14 @@ import dfischer.utils.HttpLoadTest;
 import dfischer.utils.PerformanceData;
 import dfischer.utils.CookieHandler;
 import dfischer.utils.HttpTestURL;
+import java.util.Random;
 
 /**
  * Load test add-on module.
  */
 public class GenerateRandomCharacters implements LoadtestPluginInterface
 {
-	private int vDigits = -1;			// input parameter #1 - label "Number of Digits"
+	private int vCharacters = -1;			// input parameter #1 - label "Number of Digits"
 
 	private String vResult = "";		// output parameter #1 - label "Random Number"
 
@@ -37,13 +38,13 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 
 	public String getPluginName()
 	{
-		return "Generate Random Number Digits";
+		return "Generate Random Characters";
 	}
 
 
 	public String getPluginDescription()
 	{
-		return "Generate a (natural) random number with a specified length (number of digits).\n\nThe result is returned as a string of fixed length.";
+		return "Generate a string of random characters.\n\nThe result is returned as a string of fixed length.";
 	}
 
 
@@ -74,7 +75,7 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 	public String[] getInputParameterLabels()
 	{
 		String[] labels = new String[1];
-		labels[0] = "Number of Digits";
+		labels[0] = "Number of Characters";
 		return labels;
 	}
 
@@ -94,7 +95,7 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 	public String[] getOutputParameterLabels()
 	{
 		String[] labels = new String[1];
-		labels[0] = "Random Number";
+		labels[0] = "Random Characters";
 		return labels;
 	}
 
@@ -131,7 +132,7 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 	/**
 	 * Transfer input parameter before execute() is called.
 	 *
-	 * input parameter #1: (long) vDigits / default value = '-1' / label "Number of Digits"
+	 * input parameter #1: (long) vCharacters / default value = '-1' / label "Number of Characters"
 	 *
 	 * Note: all input parameters are always converted from strings.
 	 */
@@ -140,7 +141,7 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 		switch (parameterNumber)
 		{
 			case 0:
-				vDigits = Integer.valueOf((String) parameterValue).intValue();
+				vCharacters = Integer.valueOf((String) parameterValue).intValue();
 				break;
 			default:
 				break;
@@ -156,24 +157,20 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 	public void execute(Object context)
 	{
 		logVector = new LogVector();
+		String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+		Random rnd = new Random();
 		LoadtestPluginContext pluginContext = (LoadtestPluginContext) context;
-
-		vResult = "";
-		while (vResult.length() < vDigits)
-		{
-		    int rnd = (int) (Math.random() * 52); // or use Random or whatever
-		    char base = (rnd < 26) ? 'A' : 'a';
-		    return (char) (base + rnd % 26);
-		}
-
-		vResult = vResult.substring(0, vDigits);
-	}
-
+	
+  		StringBuilder sb = new StringBuilder( vCharacters );
+  		for( int i = 0; i < vCharacters; i++ ) 
+     		sb.append( AB.charAt( rnd.nextInt(AB.length()) ) );
+  		vResult = sb.toString();
+  	}
 
 	/**
 	 * Return plug-in output parameter.
 	 *
-	 * output parameter #1: (String) vResult / default value = '' / label "Random Number"
+	 * output parameter #1: (String) vResult / default value = '' / label "Random Characters"
 	 *
 	 * Note: all output parameters are always converted to strings.
 	 */
@@ -250,4 +247,3 @@ public class GenerateRandomCharacters implements LoadtestPluginInterface
 
 
 }	// end of class
-

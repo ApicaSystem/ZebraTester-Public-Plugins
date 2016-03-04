@@ -1,6 +1,6 @@
 # GenerateRandomCharacters
 Generates a defined number of random characters, this can be used for faking ios deviceid for example.
-This plugin has been tested with ZebraTester 5.4-D but should work for any 5.2-X version.  
+This plugin has been tested with ZebraTester 5.4-D but should work for any 5.4-X version.  
 
 ###Installation###
 1. Add plugin to ../MyTests/Plugins/

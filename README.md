@@ -1,17 +1,20 @@
 # ZebraTester-Public-Plugins
+
 Contains non-commercial public plugins for ZebraTester
 
 ZebraTester is a well established load testing tool with a strong focus on web performance. 
 It can be downloaded on its official website: http://www.zebratester.com/
 
-##Guidelines##
+## Guidelines 
+
 * Each plugin is contained in its own directory 
 * Each plugin should contain a README (or README.md) file
-* Only include the .java file for the plugin (we want to avoid mismatches with compiled .class files and java versions)
+* Only include the `.java` file for the plugin (we want to avoid mismatches with compiled `.class` files and java versions)
 * Include all dependencies for the plugin
-* The README file should contain the following: Author, Creation date, Supported ZebraTester Versions & Use-case(s)
+* The README file should contain the following: `Author`, `Creation date`, `Supported ZebraTester Versions` & `Use-case(s)`
 
-##License##
+## License 
+
 The MIT License (MIT)
 
 Copyright (c) [2015] [Apica Inc]

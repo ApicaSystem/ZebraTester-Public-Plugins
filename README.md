@@ -1,8 +1,7 @@
 # ZebraTester-Public-Plugins
 Contains non-commercial public plugins for ZebraTester
 
-ZebraTester is a well established load testing tool with a strong focus on web performance. 
-It can be downloaded on its official website: http://www.zebratester.com/
+Apica ZebraTester is a scripting tool that offers a range of features to make your work easier. The scripts can be used for load testing and monitoring. The Engine for the execution of scripts for both Load Testing and Monitoring is also part of the ZebraTester Tool.
 
 ##Guidelines##
 * Each plugin is contained in its own directory 
@@ -14,7 +13,7 @@ It can be downloaded on its official website: http://www.zebratester.com/
 ##License##
 The MIT License (MIT)
 
-Copyright (c) [2015] [Apica Inc]
+Copyright (c) [2021] [Apica Inc]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
